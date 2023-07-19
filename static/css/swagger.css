@@ -349,3 +349,9 @@ body {
   font-size: 12px;
   color: rgb(80, 80, 80);
 }
+
+.swagger-ui .json-schema-2020-12__constraint {
+  font-size: 12px;
+  color: rgb(80, 80, 80);
+  background-color: rgb(224, 226, 228);
+}
