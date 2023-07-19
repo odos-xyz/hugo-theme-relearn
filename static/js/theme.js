@@ -418,11 +418,6 @@ function initOpenapi( update, attrs ){
                         openapiWrapper.classList.toggle('is-loading', false);
                     }
                     setOpenAPIHeight(oi);
-                    // .json-schema-2020-12-expand-deep-button
-                    // console.log(  document.querySelectorAll( '.json-schema-2020-12-body' ))
-                    // oi.contentWindow.document.querySelectorAll( '.json-schema-2020-12-body' ).forEach( function(btn){ btn.click() });
-                    // oi.contentWindow.document.querySelectorAll( '.json-schema-2020-12-expand-deep-button' ).forEach( function(btn){ btn.click() });
-                    // relearn_collapse_all();
                 })
                 .catch( function(error){
                     const ed = document.createElement('div');
