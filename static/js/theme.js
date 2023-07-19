@@ -321,7 +321,7 @@ function initOpenapi( update, attrs ){
     function renderOpenAPI(oc) {
         var buster = window.themeUseOpenapi.assetsBuster ? '?' + window.themeUseOpenapi.assetsBuster : '';
         var print = isPrint || attrs.isPrintPreview ? "PRINT-" : "";
-		var theme = print ? `${baseUri}/css/theme-relearn-light.css` : document.querySelector( '#variant-style' ).attributes.href.value
+        var theme = print ? `${baseUri}/css/theme-relearn-light.css` : document.querySelector( '#variant-style' ).attributes.href.value
         var swagger_theme = variants.getColorValue( print + 'OPENAPI-theme' );
         var swagger_code_theme = variants.getColorValue( print + 'OPENAPI-CODE-theme' );
 
@@ -361,6 +361,7 @@ function initOpenapi( update, attrs ){
                         'function relearn_collapse_all(){' +
                             'document.querySelectorAll( ".opblock-summary-control[aria-expanded=true]" ).forEach( btn => btn.click() );' +
                             'document.querySelectorAll( ".model-container > .model-box > .model-box > .model > span > button[aria-expanded=true]" ).forEach( btn => btn.click() );' +
+                            'document.querySelectorAll( ".json-schema-2020-12-expand-deep-button" ).forEach( btn => btn.click() );' +
                             'return false;' +
                         '}' +
                     '</script>' +
@@ -385,6 +386,7 @@ function initOpenapi( update, attrs ){
                                 oi.contentWindow.document.querySelectorAll( '.model-container > .model-box > button[aria-expanded=false]' ).forEach( function(btn){ btn.click() });
                                 setOpenAPIHeight(oi);
                             }
+                            oi.contentWindow.document.querySelectorAll( ".json-schema-2020-12-expand-deep-button" ).forEach( btn => btn.click() );
                         },
                         plugins: [
                             SwaggerUIBundle.plugins.DownloadUrl
@@ -416,6 +418,11 @@ function initOpenapi( update, attrs ){
                         openapiWrapper.classList.toggle('is-loading', false);
                     }
                     setOpenAPIHeight(oi);
+                    // .json-schema-2020-12-expand-deep-button
+                    // console.log(  document.querySelectorAll( '.json-schema-2020-12-body' ))
+                    // oi.contentWindow.document.querySelectorAll( '.json-schema-2020-12-body' ).forEach( function(btn){ btn.click() });
+                    // oi.contentWindow.document.querySelectorAll( '.json-schema-2020-12-expand-deep-button' ).forEach( function(btn){ btn.click() });
+                    // relearn_collapse_all();
                 })
                 .catch( function(error){
                     const ed = document.createElement('div');
