@@ -339,3 +339,13 @@ body {
 .swagger-ui button.json-schema-2020-12-expand-deep-button {
     background: transparent
 }
+
+.swagger-ui .renderedMarkdown code {
+  font-size: 12px;
+  color: rgb(80, 80, 80);
+}
+
+#relearn-swagger-ui .renderedMarkdown code {
+  font-size: 12px;
+  color: rgb(80, 80, 80);
+}

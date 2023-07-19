@@ -356,12 +356,13 @@ function initOpenapi( update, attrs ){
                         'function relearn_expand_all(){' +
                             'document.querySelectorAll( ".opblock-summary-control[aria-expanded=false]" ).forEach( btn => btn.click() );' +
                             'document.querySelectorAll( ".model-container > .model-box > button[aria-expanded=false]" ).forEach( btn => btn.click() );' +
+                            'document.querySelectorAll( ".json-schema-2020-12-accordion__icon--collapsed" ).forEach( btn => btn.click() );' +
                             'return false;' +
                         '}' +
                         'function relearn_collapse_all(){' +
                             'document.querySelectorAll( ".opblock-summary-control[aria-expanded=true]" ).forEach( btn => btn.click() );' +
                             'document.querySelectorAll( ".model-container > .model-box > .model-box > .model > span > button[aria-expanded=true]" ).forEach( btn => btn.click() );' +
-                            'document.querySelectorAll( ".json-schema-2020-12-expand-deep-button" ).forEach( btn => btn.click() );' +
+                            'document.querySelectorAll( ".json-schema-2020-12-accordion__icon--expanded" ).forEach( btn => btn.click() );' +
                             'return false;' +
                         '}' +
                     '</script>' +
@@ -386,7 +387,7 @@ function initOpenapi( update, attrs ){
                                 oi.contentWindow.document.querySelectorAll( '.model-container > .model-box > button[aria-expanded=false]' ).forEach( function(btn){ btn.click() });
                                 setOpenAPIHeight(oi);
                             }
-                            oi.contentWindow.document.querySelectorAll( ".json-schema-2020-12-expand-deep-button" ).forEach( btn => btn.click() );
+                            oi.contentWindow.document.querySelectorAll( ".json-schema-2020-12-accordion__icon--expanded" ).forEach( btn => btn.click() );
                         },
                         plugins: [
                             SwaggerUIBundle.plugins.DownloadUrl
