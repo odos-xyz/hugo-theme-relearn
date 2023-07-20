@@ -240,6 +240,20 @@ select:-webkit-autofill {
 .swagger-ui .model-title {
     color: var(--INTERNAL-MAIN-TITLES-TEXT-color);
 }
+
+.swagger-ui .json-schema-2020-12 {
+    color: var(--INTERNAL-MAIN-TEXT-color);
+}
+.swagger-ui section.json-schema-2020-12 h4 {
+    color: var(--INTERNAL-MAIN-TITLES-H4-TEXT-color);
+}
+.swagger-ui section.json-schema-2020-12 h5 {
+    color: var(--INTERNAL-MAIN-TITLES-H5-TEXT-color);
+}
+.swagger-ui .json-schema-2020-12-title {
+    color: var(--INTERNAL-MAIN-TITLES-TEXT-color);
+}
+
 .swagger-ui .prop-format {
     color: var(--INTERNAL-MAIN-TITLES-TEXT-color);
 }
@@ -308,4 +322,36 @@ select:-webkit-autofill {
 }
 body {
     background-color: var(--INTERNAL-MAIN-BG-color);
+}
+
+.swagger-ui div.json-schema-2020-12__title {
+    background: transparent
+}
+
+.swagger-ui button.json-schema-2020-12-accordion {
+    background: transparent
+}
+
+.swagger-ui div.json-schema-2020-12-head {
+    background: transparent
+}
+
+.swagger-ui button.json-schema-2020-12-expand-deep-button {
+    background: transparent
+}
+
+.swagger-ui .renderedMarkdown code {
+  font-size: 12px;
+  color: rgb(80, 80, 80);
+}
+
+#relearn-swagger-ui .renderedMarkdown code {
+  font-size: 12px;
+  color: rgb(80, 80, 80);
+}
+
+.swagger-ui .json-schema-2020-12__constraint {
+  font-size: 12px;
+  color: rgb(80, 80, 80);
+  background-color: rgb(224, 226, 228);
 }

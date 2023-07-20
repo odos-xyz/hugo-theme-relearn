@@ -321,7 +321,7 @@ function initOpenapi( update, attrs ){
     function renderOpenAPI(oc) {
         var buster = window.themeUseOpenapi.assetsBuster ? '?' + window.themeUseOpenapi.assetsBuster : '';
         var print = isPrint || attrs.isPrintPreview ? "PRINT-" : "";
-		var theme = print ? `${baseUri}/css/theme-relearn-light.css` : document.querySelector( '#variant-style' ).attributes.href.value
+        var theme = print ? `${baseUri}/css/theme-relearn-light.css` : document.querySelector( '#variant-style' ).attributes.href.value
         var swagger_theme = variants.getColorValue( print + 'OPENAPI-theme' );
         var swagger_code_theme = variants.getColorValue( print + 'OPENAPI-CODE-theme' );
 
@@ -356,11 +356,13 @@ function initOpenapi( update, attrs ){
                         'function relearn_expand_all(){' +
                             'document.querySelectorAll( ".opblock-summary-control[aria-expanded=false]" ).forEach( btn => btn.click() );' +
                             'document.querySelectorAll( ".model-container > .model-box > button[aria-expanded=false]" ).forEach( btn => btn.click() );' +
+                            'document.querySelectorAll( ".json-schema-2020-12-accordion__icon--collapsed" ).forEach( btn => btn.click() );' +
                             'return false;' +
                         '}' +
                         'function relearn_collapse_all(){' +
                             'document.querySelectorAll( ".opblock-summary-control[aria-expanded=true]" ).forEach( btn => btn.click() );' +
                             'document.querySelectorAll( ".model-container > .model-box > .model-box > .model > span > button[aria-expanded=true]" ).forEach( btn => btn.click() );' +
+                            'document.querySelectorAll( ".json-schema-2020-12-accordion__icon--expanded" ).forEach( btn => btn.click() );' +
                             'return false;' +
                         '}' +
                     '</script>' +
@@ -385,6 +387,7 @@ function initOpenapi( update, attrs ){
                                 oi.contentWindow.document.querySelectorAll( '.model-container > .model-box > button[aria-expanded=false]' ).forEach( function(btn){ btn.click() });
                                 setOpenAPIHeight(oi);
                             }
+                            oi.contentWindow.document.querySelectorAll( ".json-schema-2020-12-accordion__icon--expanded" ).forEach( btn => btn.click() );
                         },
                         plugins: [
                             SwaggerUIBundle.plugins.DownloadUrl
