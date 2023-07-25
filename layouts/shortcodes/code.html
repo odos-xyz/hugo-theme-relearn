@@ -1,0 +1,10 @@
+<script src="{{"js/code.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+<link href="{{"css/code.css" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
+
+<div class="highlight-wrapper">
+    {{ if len .Params | eq 2 }}
+        {{ highlight (trim .Inner "\n\r") (.Get 0) (.Get 1) }}
+    {{ else }}
+        {{ highlight (trim .Inner "\n\r") (.Get 0) "" }}
+    {{ end }}
+</div>
