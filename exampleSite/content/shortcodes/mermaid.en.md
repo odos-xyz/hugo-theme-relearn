@@ -29,7 +29,7 @@ You are free to also call this shortcode from your own partials.
 To use codefence syntax you have to turn off `guessSyntax` for the `markup.highlight` setting ([see the configuration section](#configuration)).
 {{% /notice %}}
 
-{{< tabs groupId="shortcode-parameter">}}
+{{< tabs groupid="shortcode-parameter">}}
 {{% tab title="codefence" %}}
 
 ````md
@@ -56,7 +56,7 @@ graph LR;
 
 ````go
 {{ partial "shortcodes/mermaid.html" (dict
-  "context" .
+  "page"    .
   "content" "graph LR;\nIf --> Then\nThen --> Else"
   "align"   "center"
   "zoom"    "true"
@@ -72,7 +72,7 @@ The generated graphs can be be panned by dragging them and zoomed by using the m
 ### Parameter
 
 | Name                  | Default          | Notes       |
-|:----------------------|:-----------------|:------------|
+|-----------------------|------------------|-------------|
 | **align**             | `center`         | Allowed values are `left`, `center` or `right`. |
 | **zoom**              | see notes        | Whether the graph is pan- and zoomable.<br><br>If not set the value is determined by the `mermaidZoom` setting of the [site](#global-configuration-file) or the [pages frontmatter](#pages-frontmatter) or `false` if not set at all.<br><br>- `false`: no pan or zoom<br>- `true`: pan and zoom active |
 | _**&lt;content&gt;**_ | _&lt;empty&gt;_  | Your Mermaid graph. |

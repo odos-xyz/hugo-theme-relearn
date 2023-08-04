@@ -20,7 +20,7 @@ You are free to also call this shortcode from your own partials. In this case it
 While the examples are using shortcodes with named parameter it is recommended to use codefences instead. This is because more and more other software supports codefences (eg. GitHub) and so your markdown becomes more portable.
 
 
-{{< tabs groupId="shortcode-parameter">}}
+{{< tabs groupid="shortcode-parameter">}}
 {{% tab title="codefence" %}}
 
 ````md
@@ -52,7 +52,7 @@ print("Hello World!")
 
 ````go
 {{ partial "shortcodes/highlight.html" (dict
-  "context" .
+  "page"    .
   "content" "print(\"Hello World!\")"
   "lineNos" "true"
   "type"    "py"
@@ -66,7 +66,7 @@ print("Hello World!")
 
 ````go
 {{ partial "shortcodes/highlight.html" (dict
-  "context" .
+  "page"    .
   "content" "print(\"Hello World!\")"
   "options" "lineNos=true,wrap=true"
   "type"    "py"
@@ -80,7 +80,7 @@ print("Hello World!")
 ### Parameter
 
 | Name                  | Default          | Notes       |
-|:----------------------|:-----------------|:------------|
+|-----------------------|------------------|-------------|
 | **type**              | _&lt;empty&gt;_  | The language of the code to highlight. Choose from one of the [supported languages](https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages). Case-insensitive. |
 | **wrap**              | see notes        | _Extension_. When `true` the content may wrap on long lines otherwise it will be scrollable.<br><br>The default value can be set in your `config.toml` and overwritten via frontmatter. [See below](#configuration). |
 | **options**           | _&lt;empty&gt;_  | An optional, comma-separated list of zero or more [Hugo supported options](https://gohugo.io/functions/highlight/#options) as well as extension parameter from this table. |
